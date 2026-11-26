@@ -363,7 +363,7 @@ function renderChrome(active) {
         { class: "footer-links", "aria-label": "Footer" },
         h("a", { href: pageHref("privacy") }, "Privacy Policy"),
         h("a", { href: pageHref("reviews") }, "Reviews"),
-        // h("a", { href: pageHref("admin") }, "Admin (demo)"),
+        h("a", { href: pageHref("admin") }, "Admin (demo)"),
       ),
     ),
   );
