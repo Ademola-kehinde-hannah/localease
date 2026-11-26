@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Apply the saved theme before first paint to avoid a light flash. -->
+    <script>
+      try {
+        if (localStorage.getItem("ll_theme") === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (error) {
+        // Storage may be blocked; the default light theme still works.
+      }
+    </script>
+    <title>Find Services | LocalEase</title>
+    <meta
+      name="description"
+      content="Search artisans and service providers in Ibafo."
+    />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+    <link rel="stylesheet" href="css/base.css" />
+  </head>
+  <body data-page="services">
+    <div id="site-header"></div>
+    <main id="page">
+      <section class="page-intro">
+        <p class="eyebrow">LOCAL SKILLS, CLOSER TO HOME</p>
+        <h1>Find a service provider</h1>
+        <p>Search for artisans and service providers in your community.</p>
+        <p id="loc-note" class="note" hidden></p>
+      </section>
+      <div class="wrap section">
+        <div class="tools">
+          <input
+            type="search"
+            id="q"
+            placeholder="Search by name, trade or area…"
+            aria-label="Search providers"
+          />
+          <select id="sort" aria-label="Sort providers"></select>
+        </div>
+        <div
+          class="chips"
+          id="chips"
+          role="group"
+          aria-label="Filter by trade"
+        ></div>
+        <p id="count" class="muted" aria-live="polite"></p>
+        <div class="grid" id="list"></div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/safety.js"></script>
+  </body>
+</html>

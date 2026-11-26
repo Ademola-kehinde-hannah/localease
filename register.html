@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Apply the saved theme before first paint to avoid a light flash. -->
+    <script>
+      try {
+        if (localStorage.getItem("ll_theme") === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (error) {
+        // Storage may be blocked; the default light theme still works.
+      }
+    </script>
+    <title>Artisan Registration | LocalEase</title>
+    <meta
+      name="description"
+      content="Register your service in the LocalEase directory."
+    />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+  </head>
+  <body data-page="register">
+    <div id="site-header"></div>
+    <main id="page">
+      <section class="page-intro">
+        <p class="eyebrow">GROW YOUR LOCAL BUSINESS</p>
+        <h1>Register as a service provider</h1>
+        <p>Connect with people in your community who need your skills.</p>
+      </section>
+      <div class="form-wrap">
+        <form id="artisan-form" class="panel">
+          <h2>Personal information</h2>
+          <label
+            >Full name
+            <input
+              type="text"
+              id="artisan-name"
+              required
+              maxlength="60"
+              autocomplete="name"
+          /></label>
+          <label
+            >Profile picture <span class="hint">(optional)</span>
+            <input type="file" id="artisan-photo" accept="image/*"
+          /></label>
+          <label
+            >Phone number
+            <input
+              type="tel"
+              id="artisan-phone"
+              required
+              pattern="[0-9+\s()\-]{7,18}"
+              title="7–18 digits, spaces, + ( ) or -"
+              autocomplete="tel"
+          /></label>
+          <label
+            >Trade
+            <select id="artisan-trade" required></select>
+          </label>
+          <label
+            >Describe your services
+            <textarea
+              id="artisan-description"
+              rows="4"
+              required
+              maxlength="300"
+            ></textarea>
+          </label>
+
+          
+<h2>Professional experience</h2>
+
+<label>
+  Describe your work experience
+  <textarea
+    id="artisan-experience"
+    rows="3"
+    maxlength="300"
+    required
+    placeholder="Tell us about your experience and previous projects."
+  ></textarea>
+</label>
+
+<label>
+  Previous work or portfolio link
+  <span class="hint">(optional)</span>
+  <input
+    type="url"
+    id="artisan-portfolio"
+    placeholder="https://example.com"
+  />
+</label>
+
+<h2>Qualifications</h2>
+
+<label>
+  Relevant qualifications or certificates
+  <span class="hint">(optional, where applicable)</span>
+  <textarea
+    id="artisan-qualification"
+    rows="2"
+    maxlength="200"
+    placeholder="Enter your training, certificate or licence."
+  ></textarea>
+</label>
+
+          <h2>Service location</h2>
+          <label
+            >Address or area
+            <input
+              type="text"
+              id="artisan-address"
+              value="Ibafo community"
+              required
+              maxlength="80"
+          /></label>
+          <label
+            >Nearby landmark <span class="hint">(optional)</span>
+            <input
+              type="text"
+              id="artisan-landmark"
+              maxlength="80"
+              placeholder="e.g. near a school or market"
+          /></label>
+          <button type="button" id="find-location" class="btn alt">
+            Find my location on map
+          </button>
+          <div id="registration-map" class="map"></div>
+          <p class="hint">
+            Optional, but a pin helps neighbours find you. Drag the marker to
+            adjust it.
+          </p>
+          <p id="map-message" class="status" role="status"></p>
+
+          <p class="note">
+            Your registration is saved in this browser for this project demo. It
+            is not published online.
+          </p>
+          <button type="submit" class="btn">Submit registration</button>
+          <p id="form-message" class="status" role="status"></p>
+        </form>
+      </div>
+    </main>
+    <div id="site-footer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+</html>

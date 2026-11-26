@@ -1,0 +1,261 @@
+
+/* =========================
+   LOCALEASE SAFETY PAGE
+========================= */
+
+.safety-page {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 40px 0 70px;
+    color: var(--text, #29372e);
+}
+
+/* HERO */
+
+.safety-hero {
+    padding: 65px 30px;
+    text-align: center;
+    background: var(--tint, #e4eddf);
+    border-radius: 20px;
+    margin-bottom: 55px;
+}
+
+.safety-label {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: var(--primary, #326b50);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.safety-hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 15px;
+}
+
+.safety-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted, #6d786f);
+    line-height: 1.8;
+}
+
+/* GENERAL SECTIONS */
+
+.safety-section {
+    margin-bottom: 60px;
+}
+
+.safety-section > h2,
+.safety-report-section > h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.safety-section > p,
+.safety-report-section > p {
+    color: var(--muted, #6d786f);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* VERIFICATION CARDS */
+
+.safety-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.safety-card {
+    background: var(--surface, #ffffff);
+    border: 1px solid var(--border, #e4e7df);
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.safety-icon {
+    display: inline-block;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.safety-card h3 {
+    margin-bottom: 10px;
+}
+
+.safety-card p {
+    color: var(--muted, #6d786f);
+    line-height: 1.7;
+}
+
+/* VERIFICATION NOTE */
+
+.verification-note {
+    margin-top: 25px;
+    padding: 20px;
+    border-left: 4px solid var(--primary, #326b50);
+    background: var(--tint, #e4eddf);
+    border-radius: 8px;
+    line-height: 1.7;
+}
+
+/* CLIENT GUIDELINES */
+
+.safety-guidelines {
+    display: grid;
+    gap: 18px;
+}
+
+.guideline {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px;
+    background: var(--surface, #ffffff);
+    border: 1px solid var(--border, #e4e7df);
+    border-radius: 14px;
+}
+
+.guideline-number {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--tint, #e4eddf);
+    color: var(--primary, #326b50);
+    font-weight: 800;
+}
+
+.guideline h3 {
+    margin-bottom: 7px;
+}
+
+.guideline p {
+    color: var(--muted, #6d786f);
+    line-height: 1.7;
+}
+
+/* DISCLAIMER */
+
+.safety-disclaimer {
+    padding: 30px;
+    margin-bottom: 55px;
+    border: 1px solid var(--border, #e4e7df);
+    border-radius: 16px;
+    background: var(--warm, #f4ebdd);
+    line-height: 1.8;
+}
+
+.safety-disclaimer h2 {
+    margin-bottom: 15px;
+}
+
+.safety-disclaimer p {
+    margin-bottom: 12px;
+}
+
+.safety-disclaimer strong {
+    color: var(--primary, #326b50);
+}
+
+/* REPORT FORM */
+
+.safety-report-section {
+    padding: 30px;
+    border: 1px solid var(--border, #e4e7df);
+    border-radius: 16px;
+    background: var(--surface, #ffffff);
+}
+
+.report-form {
+    display: grid;
+    gap: 12px;
+}
+
+.report-form label {
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.report-form input,
+.report-form select,
+.report-form textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border, #e4e7df);
+    border-radius: 9px;
+    background: var(--bg, #f8f7f2);
+    color: var(--text, #29372e);
+    font: inherit;
+}
+
+.report-form input:focus,
+.report-form select:focus,
+.report-form textarea:focus {
+    outline: 2px solid var(--primary, #326b50);
+    outline-offset: 2px;
+}
+
+.report-submit {
+    margin-top: 12px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 9px;
+    background: var(--primary, #326b50);
+    color: var(--on-primary, #ffffff);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.report-submit:hover {
+    background: var(--primary-d, #244a37);
+}
+
+.report-message {
+    min-height: 20px;
+    font-weight: 700;
+}
+
+.report-form small {
+    color: var(--muted, #6d786f);
+    line-height: 1.6;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .safety-page {
+        width: 92%;
+        padding-top: 25px;
+    }
+
+    .safety-hero {
+        padding: 45px 20px;
+        margin-bottom: 40px;
+    }
+
+    .safety-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .safety-section > h2,
+    .safety-report-section > h2 {
+        font-size: 24px;
+    }
+
+    .guideline {
+        padding: 17px;
+        gap: 12px;
+    }
+
+    .safety-disclaimer,
+    .safety-report-section {
+        padding: 22px;
+    }
+}

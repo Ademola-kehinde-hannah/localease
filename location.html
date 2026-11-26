@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Apply the saved theme before first paint to avoid a light flash. -->
+    <script>
+      try {
+        if (localStorage.getItem("ll_theme") === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (error) {
+        // Storage may be blocked; the default light theme still works.
+      }
+    </script>
+    <title>Your Location | LocalEase</title>
+    <meta name="description" content="Set your location to see nearby artisans." />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <link rel="stylesheet" href="css/base.css" />
+  </head>
+  <body data-page="location">
+    <div id="site-header"></div>
+    <main id="page">
+      <section class="page-intro">
+        <p class="eyebrow">📍 NEAR YOU</p>
+        <h1>Your location</h1>
+        <p>Set your location so we can sort artisans by how close they are.</p>
+      </section>
+      <div class="wrap">
+        <section class="loc-layout">
+          <form id="location-form" class="panel">
+            <h2>Enter your location</h2>
+            <label>Your address <input type="text" id="address" value="Ibafo community" required /></label>
+            <label>Nearby landmark <span class="hint">(optional)</span> <input type="text" id="landmark" placeholder="e.g. near a school or junction" /></label>
+            <button type="submit" class="btn">Show on map</button>
+            <button type="button" id="use-gps" class="btn alt">Use my current location</button>
+            <div id="location-message" class="note" role="status" hidden>
+              <strong id="message-title"></strong><br /><span id="message-text"></span>
+            </div>
+          </form>
+          <div><div id="map" class="map"></div></div>
+        </section>
+        <section class="directions">
+          <div><h2>Need directions?</h2><p class="muted">When you're ready, view your selected location on OpenStreetMap.</p></div>
+          <a href="#" id="directions-link" class="btn" target="_blank" rel="noopener noreferrer" aria-disabled="true">Get directions ➤</a>
+          <a href="services.html" class="btn alt">See nearby services</a>
+        </section>
+      </div>
+    </main>
+    <div id="site-footer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/location.js"></script>
+  </body>
+</html>

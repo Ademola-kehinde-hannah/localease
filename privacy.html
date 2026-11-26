@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Apply the saved theme before first paint to avoid a light flash. -->
+    <script>
+      try {
+        if (localStorage.getItem("ll_theme") === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (error) {
+        // Storage may be blocked; the default light theme still works.
+      }
+    </script>
+    <title>Safety & Verification | LocalEase</title>
+    <meta
+      name="description"
+      content="How LocalEase approaches artisan verification and safer client interactions."
+    />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/safety.css" />
+  </head>
+  <body data-page="safety">
+    <div id="site-header"></div>
+
+    <main class="safety-page" id="page">
+      <section class="safety-hero">
+        <span class="safety-label">YOUR INFORMATION MATTERS</span>
+        <h1>Privacy Policy</h1>
+        <p>
+          Learn how LocalEase handles your information, how your data is stored,
+          and the steps we take to help protect your privacy while using the
+          platform.
+        </p>
+      </section>
+
+
+      
+      <section class="safety-section">
+        <h2>How artisan verification works</h2>
+        <p>
+          Before an artisan receives a verified status, an authorised LocalEase
+          administrator should review the relevant information and evidence.
+        </p>
+
+        <div class="safety-cards">
+          <article class="safety-card">
+            <span class="safety-icon">🪪</span>
+            <h3>Identity check</h3>
+            <p>
+              Confirm that the artisan's identity matches their registration
+              information.
+            </p>
+          </article>
+
+          <article class="safety-card">
+            <span class="safety-icon">📞</span>
+            <h3>Contact confirmation</h3>
+            <p>
+              Confirm that the artisan can be reached through their registered
+              phone number.
+            </p>
+          </article>
+
+          <article class="safety-card">
+            <span class="safety-icon">🛠️</span>
+            <h3>Skill assessment</h3>
+            <p>
+              Review relevant certificates, practical experience or evidence of
+              previous work.
+            </p>
+          </article>
+
+          <article class="safety-card">
+            <span class="safety-icon">⭐</span>
+            <h3>References</h3>
+            <p>
+              Where available, check references from previous customers with
+              their permission.
+            </p>
+          </article>
+        </div>
+
+        <div class="verification-note">
+          <strong>Important:</strong> Registration alone does not mean an
+          artisan is verified. Only checks that have actually been completed
+          should be displayed as verified.
+        </div>
+      </section>
+
+      <section class="safety-section">
+        <h2>Client safety guidelines</h2>
+        <p>Keep these precautions in mind before hiring an artisan.</p>
+
+        <div class="safety-guidelines">
+          <article class="guideline">
+            <span class="guideline-number">01</span>
+            <div>
+              <h3>Avoid isolated meetings</h3>
+              <p>
+                Do not arrange your first meeting in an isolated or unfamiliar
+                private location. Where possible, meet in a public place.
+              </p>
+            </div>
+          </article>
+
+          <article class="guideline">
+            <span class="guideline-number">02</span>
+            <div>
+              <h3>Have someone with you</h3>
+              <p>
+                If an artisan visits your home, consider having a trusted person
+                present. Arrange visits during daylight where possible.
+              </p>
+            </div>
+          </article>
+
+          <article class="guideline">
+            <span class="guideline-number">03</span>
+            <div>
+              <h3>Confirm the artisan's details</h3>
+              <p>
+                Check the artisan's name, phone number, profile information and
+                verification status.
+              </p>
+            </div>
+          </article>
+
+          <article class="guideline">
+            <span class="guideline-number">04</span>
+            <div>
+              <h3>Agree on the cost first</h3>
+              <p>
+                Discuss the work, estimated cost, materials and payment
+                arrangements before work begins.
+              </p>
+            </div>
+          </article>
+
+          <article class="guideline">
+            <span class="guideline-number">05</span>
+            <div>
+              <h3>Protect your personal information</h3>
+              <p>
+                Never share your banking PIN, passwords or one-time passwords
+                with an artisan.
+              </p>
+            </div>
+          </article>
+
+          <article class="guideline">
+            <span class="guideline-number">06</span>
+            <div>
+              <h3>Trust your instincts</h3>
+              <p>
+                Stop the interaction if you feel unsafe. Leave the situation and
+                seek help if necessary.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="safety-disclaimer">
+        <h2>Important safety disclaimer</h2>
+        <p>
+          LocalEase is a platform designed to connect clients with service
+          providers. A verification status indicates only the specific checks
+          completed and stated on an artisan's profile.
+        </p>
+        <p>
+          Verification does not guarantee an artisan's character, conduct,
+          workmanship or future behaviour. LocalEase cannot guarantee the safety
+          of every interaction or service.
+        </p>
+        <p>
+          Clients are responsible for taking reasonable precautions before
+          hiring an artisan. Do not meet in isolated places or put yourself in
+          an unsafe situation.
+        </p>
+        <strong>Your safety comes first.</strong>
+      </section>
+
+      <section class="safety-report-section">
+        <h2>Report a concern</h2>
+        <p>
+          If you notice suspicious behaviour or misleading information, you can
+          record a report below.
+        </p>
+
+        <form id="report-form" class="report-form">
+          <label for="report-artisan">Artisan's name</label>
+          <input
+            type="text"
+            id="report-artisan"
+            name="artisan"
+            placeholder="Enter artisan's name"
+            required
+          />
+
+          <label for="report-phone">Artisan's phone number (optional)</label>
+          <input
+            type="tel"
+            id="report-phone"
+            name="phone"
+            placeholder="Enter phone number"
+          />
+
+          <label for="report-reason">Reason for report</label>
+          <select id="report-reason" name="reason" required>
+            <option value="">Select a reason</option>
+            <option value="Misleading information">
+              Misleading information
+            </option>
+            <option value="Suspicious behaviour">Suspicious behaviour</option>
+            <option value="Inappropriate conduct">Inappropriate conduct</option>
+            <option value="Safety concern">Safety concern</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="report-details">Additional details</label>
+          <textarea
+            id="report-details"
+            name="details"
+            rows="4"
+            placeholder="Explain what happened..."
+            required
+          ></textarea>
+
+          <button type="submit" class="report-submit">Submit report</button>
+
+          <p id="report-message" class="report-message" aria-live="polite"></p>
+
+          <small>
+            Demonstration only: reports are saved in this browser and are not
+            sent to or monitored by an administrator. Do not include passwords,
+            identity numbers or other sensitive personal information.
+          </small>
+        </form>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/safety.js"></script>
+  </body>
+</html>

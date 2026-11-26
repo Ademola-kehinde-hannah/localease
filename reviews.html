@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Apply the saved theme before first paint to avoid a light flash. -->
+    <script>
+      try {
+        if (localStorage.getItem("ll_theme") === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (error) {
+        // Storage may be blocked; the default light theme still works.
+      }
+    </script>
+    <title>Reviews | LocalEase</title>
+    <meta name="description" content="What the Ibafo community says about local service providers." />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    
+    <link rel="stylesheet" href="css/base.css" />
+  </head>
+  <body data-page="reviews">
+    <div id="site-header"></div>
+    <main id="page">
+      <section class="page-intro">
+        <p class="eyebrow">COMMUNITY FEEDBACK</p>
+        <h1>Reviews &amp; ratings</h1>
+        <p>Discover what people are saying about local service providers in Ibafo.</p>
+      </section>
+      <div class="wrap section">
+        <label class="reviews-filter">Show reviews for <select id="artisan-filter"></select></label>
+        <div class="grid" id="reviews-list"></div>
+      </div>
+    </main>
+    <div id="site-footer"></div>
+    
+    <script src="js/common.js"></script>
+    <script src="js/reviews.js"></script>
+  </body>
+</html>

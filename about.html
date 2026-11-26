@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Apply the saved theme before first paint to avoid a light flash. -->
+    <script>
+      try {
+        if (localStorage.getItem("ll_theme") === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (error) {
+        // Storage may be blocked; the default light theme still works.
+      }
+    </script>
+    <title>About Us | LocalEase</title>
+    <meta
+      name="description"
+      content="LocalEase helps Ibafo residents discover local artisans and essential services."
+    />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+    <link rel="stylesheet" href="css/base.css" />
+  </head>
+  <body data-page="about">
+    <div id="site-header"></div>
+    <main id="page">
+      <section class="page-intro">
+        <p class="eyebrow">ABOUT LOCALEASE</p>
+        <h1>Connecting our community, one service at a time.</h1>
+        <p>
+          LocalEase is a community services directory that helps residents of
+          Ibafo discover local artisans and essential services more easily.
+        </p>
+      </section>
+      <div class="wrap">
+        <section class="section about-split">
+          <div>
+            <span class="eyebrow">OUR PURPOSE</span>
+            <h2>Why LocalEase?</h2>
+            <p>
+              Finding a reliable artisan can take time, especially when
+              information is scattered across different places.
+            </p>
+            <p>
+              LocalEase gives residents one simple place to browse categories,
+              compare ratings and reviews, and find location information.
+            </p>
+          </div>
+          <div class="big-icon" aria-hidden="true">👥</div>
+        </section>
+        <section class="section">
+          <span class="eyebrow">GETTING STARTED</span>
+          <h2>How it works</h2>
+          <div class="steps">
+            <article class="step">
+              <div class="ic">🔎</div>
+              <h3>Find a service</h3>
+              <p class="muted">Browse categories or search by name or trade.</p>
+            </article>
+            <article class="step">
+              <div class="ic">📍</div>
+              <h3>Explore locations</h3>
+              <p class="muted">Set your location and see who is closest.</p>
+            </article>
+            <article class="step">
+              <div class="ic">➕</div>
+              <h3>Register</h3>
+              <p class="muted">
+                Artisans can submit their details to create a listing.
+              </p>
+            </article>
+          </div>
+        </section>
+        <section class="join">
+          <div>
+            <h2>Built with our community in mind</h2>
+            <p>
+              Our goal is to make discovering local services simpler and to
+              encourage connections within the Ibafo community.
+            </p>
+          </div>
+          <a href="services.html" class="btn">Explore services →</a>
+        </section>
+        <p class="muted about-note">
+          LocalEase is a frontend project. Data is stored in your browser, so it
+          is not shared across devices.
+        </p>
+      </div>
+    </main>
+    <div id="site-footer"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/about.js"></script>
+  </body>
+</html>

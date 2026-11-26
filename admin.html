@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Apply the saved theme before first paint to avoid a light flash. -->
+  <script>
+    try {
+      if (localStorage.getItem("ll_theme") === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    } catch (error) {
+      // Storage may be blocked; the default light theme still works.
+    }
+  </script>
+
+  <title>Admin Dashboard | LocalEase</title>
+  <meta
+    name="description"
+    content="Review artisan registrations and manage their verification status."
+  />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+
+<body data-page="admin">
+
+  <div id="site-header"></div>
+
+  <main id="page">
+
+    <section class="page-intro">
+      <p class="eyebrow">LOCALEASE ADMIN</p>
+      <h1>Artisan Verification</h1>
+      <p>Review artisan registrations and manage their verification status.</p>
+    </section>
+
+    <section class="admin-panel">
+
+      <div class="admin-heading">
+        <h2>Registered artisans</h2>
+        <p id="admin-count">Loading artisans...</p>
+      </div>
+
+      <div id="admin-list"></div>
+
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/admin.js"></script>
+
+</body>
+</html>
